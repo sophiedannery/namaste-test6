@@ -34,8 +34,17 @@ Le site permettra aux visiteurs de découvrir les cours et professeurs, et aux �
 ### 2. Cloner le projet
 
 ```bash
-git clone https://github.com/<ton-utilisateur>/<ton-repo>.git
+git clone https://github.com/dannerysophie/namaste-test6.git
 cd <ton-repo>
+```
+### 2. Configurer les variables d'environnement 
+
+Créer le fichier .env.local puis configure les variables suivantes : 
+
+```bash
+APP_ENV=dev
+DATABASE_URL="mysql://namaste_user:<voir_le_mdp_dans_docker-compose>d@db:3306/namaste_test2?serverVersion=8.0&charset=utf8mb4"
+MONGODB_URL="mongodb://root:root@mongo:27017/namaste_test2?authSource=admin"
 ```
 
 ### 3. Lancer les conteneurs
@@ -65,6 +74,14 @@ web       Up        0.0.0.0:8080->80/tcp
 db        Up        3306/tcp
 mongo     Up        27017/tcp
 ```
+
+### 5. Vendor
+A cette étape, si le dossier vendor est vide ou manquant : 
+```bash
+docker compose exec app composer install -n --prefer-dist
+```
+pour installer les dépendances Symfony dans le conteneur PHP.
+
 
 ### 5. Vérifier les connexions
 
