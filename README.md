@@ -90,6 +90,39 @@ docker compose exec db mysql -u namaste_user -p -e "SHOW DATABASES;"
 docker compose exec mongo mongosh -u root -p root --authenticationDatabase admin --eval "show dbs"
 ```
 
+## 🧹 Contrôle de qualité du code
+Afin de garantir un code lisible, homogène et conforme aux standards professionnels, plusieurs utilitaires de contrôle de qualité ont été installés et configurés. 
+
+### PHP - PHP CodeSnifer (PHPCS)
+* Objectif : vérifier le respect des standard PHP.
+* Commandes : 
+```bash
+# Analyse du code
+docker compose exec app vendor/bin/phpcs
+
+# Correction automatique des erreurs
+docker compose exec app vendor/bin/phpcbf
+```
+* Configuration : le fichier phpcs.xml.dist définit les règles.
+
+### JavaScript - ESLint
+* Objectif : détecter les erreurs de syntaxe et harmoniser le style de code Javascript.
+* Commandes : 
+```bash
+# Analyse du code
+docker run --rm -v "${PWD}:/app" -w /app node:20-alpine npm run lint:js
+
+# Correction automatique des erreurs
+docker run --rm -v "${PWD}:/app" -w /app node:20-alpine npm run fix:js
+```
+* Configuration : le fichier .eslintrc.json définit les règles.
+
+### Formatage - Prettier
+* Objectif : appliquer automatiquement une mise en forme cohérente (indentation, espaces, guillements).
+* Utilisation : 
+Installé comme extention VS Code
+**Format on Save** activé : le code est automatiquement formaté à chaque sauvegarde.
+
 ## 🚀 Étapes suivantes
 
 1. Maquettage
