@@ -123,6 +123,7 @@ docker run --rm -v "${PWD}:/app" -w /app node:20-alpine npm run fix:js
 Installé comme extention VS Code
 **Format on Save** activé : le code est automatiquement formaté à chaque sauvegarde.
 
+
 ## 🚀 Étapes suivantes
 
 1. Maquettage
@@ -139,6 +140,9 @@ Installé comme extention VS Code
 
 7. Déploiement et documentation, Docker + Heroku / OVH, guide d’installation, manuel utilisateur.
 
+
+
+
 ## Licence et Contrat
 
 Projet développé par Dannery Sophie dans le cadre de la formation **TP Développeur Web et Web mobile** (RNCP37674) - 2025
@@ -146,3 +150,14 @@ Projet développé par Dannery Sophie dans le cadre de la formation **TP Dévelo
 Encadrement pédagogique : **STUDI /DREETS**
 
 📧 Contact : **dannery.sophie@gmail.com**
+
+
+## Ressources supplémentaires
+
+### Visuels
+
+- 🎨 [Charte graphique](https://github.com/sophiedannery/namaste-test6/blob/dev/docs/Namaste%20Yoga%20Studio%20-%20Charte%20Graphique.pdf)
+
+### Gestion de projet
+
+- 📊 [Gestion de projet](https://www.notion.so/Namaste-Yoga-Studio-28d87135a9b280e19d3de692920d3e04)
